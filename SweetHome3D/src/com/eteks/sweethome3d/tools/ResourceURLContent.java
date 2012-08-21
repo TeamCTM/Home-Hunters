@@ -56,7 +56,8 @@ public class ResourceURLContent extends URLContent {
                             boolean multiPartResource) {
     super(getClassResource(resourceClass, resourceName));
     if (getURL() == null) {
-      throw new IllegalArgumentException("Unknown resource " + resourceName);
+      //tms throw new IllegalArgumentException("Unknown resource " + resourceName);
+      System.err.println("ResourceURLContent::ResourceURLContent: unknown resource "+resourceName);//tms
     }
     this.multiPartResource = multiPartResource;
   }

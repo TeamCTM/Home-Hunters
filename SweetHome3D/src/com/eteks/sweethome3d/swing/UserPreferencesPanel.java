@@ -271,7 +271,7 @@ public class UserPreferencesPanel extends JPanel implements DialogView {
 
     boolean no3D;
     try {
-      no3D = Boolean.getBoolean("com.eteks.sweethome3d.no3D");
+      no3D = true;//tms Boolean.getBoolean("com.eteks.sweethome3d.no3D");
     } catch (AccessControlException ex) {
       // If com.eteks.sweethome3d.no3D property can't be read, 
       // security manager won't allow to access to Java 3D DLLs required by 3D view too

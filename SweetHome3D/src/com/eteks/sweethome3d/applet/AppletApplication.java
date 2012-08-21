@@ -222,7 +222,7 @@ public class AppletApplication extends HomeApplication {
     // Collect deleted objects (seems to be required under Mac OS X when the applet is being reloaded)
     System.gc();
     try {
-      if (!Boolean.getBoolean("com.eteks.sweethome3d.no3D")) { 
+      if (!true){//tms Boolean.getBoolean("com.eteks.sweethome3d.no3D")) { 
         // Stop managers threads
         TextureManager.getInstance().clear();
         ModelManager.getInstance().clear();
@@ -444,7 +444,7 @@ public class AppletApplication extends HomeApplication {
 
     boolean no3D;
     try {
-      no3D = Boolean.getBoolean("com.eteks.sweethome3d.no3D");
+      no3D = true;//tms Boolean.getBoolean("com.eteks.sweethome3d.no3D");
     } catch (AccessControlException ex) {
       // If com.eteks.sweethome3d.no3D property can't be read, 
       // security manager won't allow to access to Java 3D DLLs required to manage 3D too
@@ -649,7 +649,7 @@ public class AppletApplication extends HomeApplication {
    */
   private void addComponent3DRenderingErrorObserver() {
     try {
-      if (!Boolean.getBoolean("com.eteks.sweethome3d.no3D")) {
+      if (!true){//tms Boolean.getBoolean("com.eteks.sweethome3d.no3D")) {
         // Instead of adding a RenderingErrorListener directly to VirtualUniverse, 
         // we add it through Component3DManager, because offscreen rendering needs to check 
         // rendering errors with its own RenderingErrorListener
